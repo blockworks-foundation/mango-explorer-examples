@@ -5,7 +5,7 @@ RUN apt-get update && apt-get -y install jq libxml2-dev libxslt-dev libffi-dev z
 USER ${NB_UID}
 
 COPY --chown=${NB_UID}:${NB_GID} requirements.txt /tmp/
-RUN pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ --quiet --no-cache-dir --requirement /tmp/requirements.txt && \
+RUN pip install --quiet --no-cache-dir --requirement /tmp/requirements.txt && \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
 
