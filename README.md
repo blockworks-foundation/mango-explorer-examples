@@ -103,14 +103,14 @@ Often you just want to work with your own orders. [This example](ShowOwnOrders.i
 Tracking down details of token transfers across Serum accounts can be tricky. One place that's hard to check sometimes is the `OpenOrders` account. [This example](ShowSerumOpenOrders.ipynb) shows you how to fetch and print an account's Serum `OpenOrders`.
 
 
-### Spot OpenOrders (Coming Soon...!)
+### Spot OpenOrders
 
-Mango spot `OpenOrders` accounts are very similar to Serum `OpenOrders`, but are fetched slightly differently. This example shows you how to fetch and print an account's Spot `OpenOrders`.
+Mango spot `OpenOrders` accounts are very similar to Serum `OpenOrders`, but are fetched slightly differently. This example shows you how to fetch and print an `Account`'s Spot `OpenOrders`.
 
 
 ### Perp OpenOrders (Coming Soon...!)
 
-Perp `OpenOrders` are a little difference from Spot and Serum `OpenOrders`. This example shows you how to fetch and print an account's perp `OpenOrders`.
+Perp `OpenOrders` are a little difference from Spot and Serum `OpenOrders`, in that they are contained directly inside the `Account` and have no independent address. [This example](ShowPerpOpenOrders.ipynb) shows you how to fetch and print an account's perp `OpenOrders`.
 
 
 ### Perp Event Queue
