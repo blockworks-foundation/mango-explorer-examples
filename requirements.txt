@@ -1,0 +1,3 @@
+ipython
+jupyter_contrib_nbextensions
+mango-explorer
