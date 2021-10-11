@@ -11,6 +11,8 @@ These are some simple examples of how to use the [mango-explorer](https://github
 
 Each example aims to be as simple as possible for a given piece of functionality. The [mango-explorer](https://github.com/blockworks-foundation/mango-explorer) project itself has more realistic usage (for example, commands in the /bin directory), with parameters and error handling.
 
+These examples are all in Jupyter Notebooks and can be [run in your browser (no installation necessary!) on Binder](https://mybinder.org/v2/gh/blockworks-foundation/mango-explorer-examples/HEAD).
+
 
 ## Devnet
 
