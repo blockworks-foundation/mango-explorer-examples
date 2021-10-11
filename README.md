@@ -113,6 +113,16 @@ Mango spot `OpenOrders` accounts are very similar to Serum `OpenOrders`, but are
 Perp `OpenOrders` are a little difference from Spot and Serum `OpenOrders`. This example shows you how to fetch and print an account's perp `OpenOrders`.
 
 
+### Perp Event Queue
+
+The `PerpEventQueue` holds `PerpFillEvent`s, `PerpOutEvent`a and `PerpLiquidateEvent`s, as they are processed. [This example](ShowPerpEventQueue.ipynb) shows you how to fetch and print all `PerpEventQueue` events.
+
+
+### Streaming Perp Events
+
+What if you want to watch the events appear in real-time? [This example](ShowStreamingPerpEvents.ipynb) shows you how to stream all perp events from a `PerpEventQueue`.
+
+
 ## Combinable Instructions: Place Order (Coming Soon...!)
 
 `CombinableInstruction`s work at a lower level than `MarketOperations`, but they provide more flexibility because they can be gathered together into a single atomic transaction. This example shows you how to place an order, crank, and settle all in one go.
