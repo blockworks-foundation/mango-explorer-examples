@@ -98,6 +98,11 @@ If you have a `Market` and you have tokens, you can place and cancel `Order`s. [
 Often you just want to work with your own orders. [This example](ShowOwnOrders.ipynb) shows you how to retrieve only your own `Order`s from a `Market`.
 
 
+### Trade Executor: Immediate BUYs and SELLs
+
+Sometimes - for example when hedging - you just want to place a 'take' `Order` with some assurance that it will be filled quickly within a specific slippage. For example, you might want to BUY 100 SOL at a price up to 2% higher than the current market price. 'Immediate Or Cancel' (IOC) orders allow you to always 'take' from the orderbook (they will never be on the book themselves), and the 'up to 2%' above is called the 'slippage'. [This example](ImmediateBuyAndSell.ipynb) shows you an easy way to submit IOC orders with slippage.
+
+
 ### Serum OpenOrders
 
 Tracking down details of token transfers across Serum accounts can be tricky. One place that's hard to check sometimes is the `OpenOrders` account. [This example](ShowSerumOpenOrders.ipynb) shows you how to fetch and print an account's Serum `OpenOrders`.
@@ -108,7 +113,7 @@ Tracking down details of token transfers across Serum accounts can be tricky. On
 Mango spot `OpenOrders` accounts are very similar to Serum `OpenOrders`, but are fetched slightly differently. This example shows you how to fetch and print an `Account`'s Spot `OpenOrders`.
 
 
-### Perp OpenOrders (Coming Soon...!)
+### Perp OpenOrders
 
 Perp `OpenOrders` are a little difference from Spot and Serum `OpenOrders`, in that they are contained directly inside the `Account` and have no independent address. [This example](ShowPerpOpenOrders.ipynb) shows you how to fetch and print an account's perp `OpenOrders`.
 
