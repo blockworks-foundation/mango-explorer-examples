@@ -53,6 +53,11 @@ A Mango `Group` allows cross-margining of assets and holds details of spot and p
 A `Wallet` holds the keys to access specific Solana data. [This example](ShowWallet.ipynb) shows how to instantiate a wallet from existing data.
 
 
+### Wallet Token Balance
+
+Wallets hold 'SPL' tokens. [This example](ShowWalletTokenBalance.ipynb) shows how to fetch the token balance for Wrapped SOL in the current wallet.
+
+
 ### Account
 
 A Mango `Account` holds details of a user's balances and positions. [This example](ShowAccount.ipynb) shows you how to access an account and show its details.
