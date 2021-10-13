@@ -143,9 +143,9 @@ What if you want to watch the events appear in real-time? [This example](ShowStr
 Depositing and withdrawing are non-market operations, so don't fit into the `MarketOperations` paradign. They are still possible using `CombinableInstruction`s though! [This example](DepositAndWithdraw.ipynb) shows how to deposit and then withdraw Wrapped SOL to and from a Mango `Account`.
 
 
-## Basic Marketmaker (Coming Soon...!)
+## Simple Marketmaker
 
-Now that you can fetch prices and place and cancel orders, this example shows a basic marketmaker.
+Now that you can fetch prices and place and cancel orders, this example shows a simple marketmaker. [This example](SimpleMarketmaker.ipynb) is a slightly-reduced version of the `SimpleMarketMaker` in `mango-explorer`, and it follows the same principles but allows you to run the code entirely in your browser.
 
 
 # Support
