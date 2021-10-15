@@ -1,0 +1,9 @@
+name: mango-explorer-examples-environment
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - numpy
+  - matplotlib
+  - pandas
+  - mango-explorer
