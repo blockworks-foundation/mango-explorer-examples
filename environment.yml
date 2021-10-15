@@ -6,4 +6,6 @@ dependencies:
   - numpy
   - matplotlib
   - pandas
-  - mango-explorer
+  - pip
+  - pip:
+    - -r requirements.txt
