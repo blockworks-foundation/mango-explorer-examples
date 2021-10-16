@@ -148,6 +148,17 @@ Depositing and withdrawing are non-market operations, so don't fit into the `Mar
 Now that you can fetch prices and place and cancel orders, this example shows a simple marketmaker. [This example](SimpleMarketmaker.ipynb) is a slightly-reduced version of the `SimpleMarketMaker` in `mango-explorer`, and it follows the same principles but allows you to run the code entirely in your browser.
 
 
+## Practical: Run the Marketmaker
+
+This [much-more complete example](PracticalRunMarketmaker.ipynb) shows how to build and run the more-complete `MarketMaker`.
+
+It walks through creating a custom `OrderChain`, how to add (and configure) specific `Element`s to the `OrderChain`, and how to build the `ModelState` for every 'pulse'.
+
+It will then load and run the `MarketMaker`, with a fresh 'pulse' every 30 seconds. It will place `Order`s, cancel existing `Order`s, or leaving suitable `Order`s as they are.
+
+This is the full `MarketMaker`, the same one run via the `marketmaker` command in the [Quickstart](https://github.com/blockworks-foundation/mango-explorer/blob/main/docs/MarketmakingQuickstart.md), but with a custom (editable!) configuration, running in your browser.
+
+
 # Support
 
     🥭 Mango Markets: https://mango.markets
