@@ -138,11 +138,6 @@ What if you want to watch the events appear in real-time? [This example](ShowStr
 Mango provides on-chain incentives for providing liquidity on perp markets. [This example](ShowLiquidityMiningInfo.ipynb) shows you how to view the current state of the liquidity incentives, how much has been given out already in the current period, how much remains to be given out, what the threshold is, and an estimate of when the current period will end.
 
 
-## Combinable Instructions: Place Order (Coming Soon...!)
-
-`CombinableInstruction`s work at a lower level than `MarketOperations`, but they provide more flexibility because they can be gathered together into a single atomic transaction. This example shows you how to place an order, crank, and settle all in one go.
-
-
 ## Combinable Instructions
 
 `CombinableInstructions` are unique to `mango-explorer` (as far as I know) and they aim to make code efficinet and clear at the same time. They're used frequently throughout `mango-explorer` code and allow operations like:
@@ -156,6 +151,11 @@ Mango provides on-chain incentives for providing liquidity on perp markets. [Thi
 ## Combinable Instructions: Deposit and Withdraw
 
 Depositing and withdrawing are non-market operations, so don't fit into the `MarketOperations` paradigm. They are still possible using `CombinableInstruction`s though! [This example](DepositAndWithdraw.ipynb) shows how to deposit and then withdraw Wrapped SOL to and from a Mango `Account`.
+
+
+## Combinable Instructions: Raw Transactions
+
+Integration with other systems sometimes requires working with Solana's own `Transaction`s and `TransactionInstruction`s. `mango-explorer` uses `CombinableInstructions` as its native format, so [this example](RawTransactions.ipynb) shows you how to extract the raw `TransactionInstruction`s and `keypair`s from the `CombinableInstructions` and run them in a raw Solana `Transaction`.
 
 
 ## Simple Marketmaker
