@@ -133,6 +133,11 @@ The `PerpEventQueue` holds `PerpFillEvent`s, `PerpOutEvent`a and `PerpLiquidateE
 What if you want to watch the events appear in real-time? [This example](ShowStreamingPerpEvents.ipynb) shows you how to stream all perp events from a `PerpEventQueue`.
 
 
+### Liquidity Mining
+
+Mango provides on-chain incentives for providing liquidity on perp markets. [This example](ShowLiquidityMiningInfo.ipynb) shows you how to view the current state of the liquidity incentives, how much has been given out already in the current period, how much remains to be given out, what the threshold is, and an estimate of when the current period will end.
+
+
 ## Combinable Instructions: Place Order (Coming Soon...!)
 
 `CombinableInstruction`s work at a lower level than `MarketOperations`, but they provide more flexibility because they can be gathered together into a single atomic transaction. This example shows you how to place an order, crank, and settle all in one go.
