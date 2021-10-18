@@ -143,9 +143,19 @@ Mango provides on-chain incentives for providing liquidity on perp markets. [Thi
 `CombinableInstruction`s work at a lower level than `MarketOperations`, but they provide more flexibility because they can be gathered together into a single atomic transaction. This example shows you how to place an order, crank, and settle all in one go.
 
 
+## Combinable Instructions
+
+`CombinableInstructions` are unique to `mango-explorer` (as far as I know) and they aim to make code efficinet and clear at the same time. They're used frequently throughout `mango-explorer` code and allow operations like:
+```
+(signers + do_something + do_something_else + cleanup).execute(context)
+```
+
+[This example](CombinableInstructions.ipynb) shows this pattern in practice by placing an order, cranking the market and settling any fill in one transaction.
+
+
 ## Combinable Instructions: Deposit and Withdraw
 
-Depositing and withdrawing are non-market operations, so don't fit into the `MarketOperations` paradign. They are still possible using `CombinableInstruction`s though! [This example](DepositAndWithdraw.ipynb) shows how to deposit and then withdraw Wrapped SOL to and from a Mango `Account`.
+Depositing and withdrawing are non-market operations, so don't fit into the `MarketOperations` paradigm. They are still possible using `CombinableInstruction`s though! [This example](DepositAndWithdraw.ipynb) shows how to deposit and then withdraw Wrapped SOL to and from a Mango `Account`.
 
 
 ## Simple Marketmaker
