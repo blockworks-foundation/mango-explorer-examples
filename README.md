@@ -163,7 +163,7 @@ Integration with other systems sometimes requires working with Solana's own `Tra
 Now that you can fetch prices and place and cancel orders, this example shows a simple marketmaker. [This example](SimpleMarketmaker.ipynb) is a slightly-reduced version of the `SimpleMarketMaker` in `mango-explorer`, and it follows the same principles but allows you to run the code entirely in your browser.
 
 
-## Practical: Run the Marketmaker
+## Practical: Run the Marketmaker (Perp)
 
 This [much-more complete example](PracticalRunMarketmaker.ipynb) shows how to build and run the more-complete `MarketMaker`.
 
@@ -172,6 +172,13 @@ It walks through creating a custom `OrderChain`, how to add (and configure) spec
 It will then load and run the `MarketMaker`, with a fresh 'pulse' every 30 seconds. It will place `Order`s, cancel existing `Order`s, or leaving suitable `Order`s as they are.
 
 This is the full `MarketMaker`, the same one run via the `marketmaker` command in the [Quickstart](https://github.com/blockworks-foundation/mango-explorer/blob/main/docs/MarketmakingQuickstart.md), but with a custom (editable!) configuration, running in your browser.
+
+
+## Practical: Run the Marketmaker (Spot)
+
+This [spot-market example](PracticalRunMarketmakerSpot.ipynb) builds on the previous [perp-market example](PracticalRunMarketmaker.ipynb) to show how to run a marketmaker against a spot market and - importantly - show what similarities and differences there are.
+
+The bulk of the code is the same, but spot markets use different mechanisms to load the `ModelState` and a different `CollateralCalculator`.
 
 
 # Support
