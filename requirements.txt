@@ -1,3 +1,4 @@
 ipython
 jupyter_contrib_nbextensions
-mango-explorer
+nblint
+mango-explorer >= 3.2.0
