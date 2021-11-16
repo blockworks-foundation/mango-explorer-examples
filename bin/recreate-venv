@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+CURRENT_DIRECTORY="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+PROJECT_DIRECTORY="${CURRENT_DIRECTORY}/.."
+
+cd ${PROJECT_DIRECTORY}
+
+printf "Removing old venv and cache directories...\n"
+rm -rf .venv .ipynb_checkpoints
+
+printf "Creating fresh .venv...\n"
+python3 -m venv .venv
+
+printf "Loading fresh .venv...\n"
+. .venv/bin/activate
+
+printf "Installing dependencies into .venv...\n"
+pip install -r requirements.txt
+
+printf "Building Jupyter Lab...\n"
+python -m jupyter lab build
