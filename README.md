@@ -88,9 +88,9 @@ What if you want to watch the price update in real-time? [This example](ShowStre
 A `Market` is an abstract entity to gather together access to the 3 specific market types that [mango-explorer](https://github.com/blockworks-foundation/mango-explorer) supports: Serum, Spot and Perp. [This example](ShowMarkets.ipynb) shows you how to access different market types and show their details.
 
 
-### Market Operations: Show All Orders
+### Market Operations: Show OrderBook
 
-Once you have access to a `Market` you can show its `Order`s. [This example](ShowAllOrders.ipynb) shows you how.
+Once you have access to a `Market` you can show its `OrderBook`. [This example](ShowOrderBook.ipynb) shows you how.
 
 
 ### Market Operations: Place and Cancel Orders
