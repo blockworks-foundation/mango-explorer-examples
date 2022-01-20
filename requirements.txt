@@ -2,4 +2,4 @@ ipython
 jupyter
 jupyterlab
 nblint
-mango-explorer
+mango-explorer >= 3.3.0
