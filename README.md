@@ -33,14 +33,18 @@ solana airdrop 10 DeekipCw5jz7UgQbtUbHQckTYGKXWaPQV4xY93DaiM6h --url devnet
 
 ## Python3
 
-All the code here and in [mango-explorer](https://github.com/blockworks-foundation/mango-explorer) assumes Python 3. Where you see commands running `python`, you may need to instead explicitly run `python3` (depending on your system).
+All the code here and in [mango-explorer](https://github.com/blockworks-foundation/mango-explorer) assumes Python 3.9. Where you see commands running `python`, you may need to instead explicitly run `python3` (depending on your system).
 
 
 ## Contents
 
 ### Context
 
-The `Context` is heavily used to provide access to Solana, Mango Groups and Accounts. [This example](ShowContext.ipynb) shows you how to create a `Context` object.
+The `Context` is heavily used to provide access to Solana, Mango Groups and Accounts. [This example](ShowContext.ipynb) shows you how to create a `Context` object. `Context` objects are `Disposable` and so should should have the `dispose()` method called on the object when it is no longer used. This can be done manually but the easiest way is usually to use it in a `with` statement like:
+```
+with mango.ContextBuilder.build(cluster_name="devnet") as context:
+    ...
+```
 
 
 ### Group
@@ -103,7 +107,7 @@ If you have a `Market` and you have tokens, you can place and cancel `Order`s. [
 Often you just want to work with your own orders. [This example](ShowOwnOrders.ipynb) shows you how to retrieve only your own `Order`s from a `Market`.
 
 
-### Trade Executor: Immediate BUYs and SELLs
+### Market BUYs and SELLs
 
 Sometimes - for example when hedging - you just want to place a 'take' `Order` with some assurance that it will be filled quickly within a specific slippage. For example, you might want to BUY 100 SOL at a price up to 2% higher than the current market price. 'Immediate Or Cancel' (IOC) orders allow you to always 'take' from the orderbook (they will never be on the book themselves), and the 'up to 2%' above is called the 'slippage'. [This example](ImmediateBuyAndSell.ipynb) shows you an easy way to submit IOC orders with slippage.
 
